@@ -10,10 +10,8 @@ var port = process.env.PORT || 3000;
     
 }).listen(process.env.PORT || 8080);*/
 
-process.env.PORT
-
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/public");
+    res.sendFile(__dirname + "/public/index.html");
 });
 
 app.listen(port, () => {
