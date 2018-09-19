@@ -1,7 +1,7 @@
 var http = require('http');
 var express = require("express");
 var app = express();
-var port = 3000;
+var port = process.env.PORT || 3000;
 
 /*http.createServer(function (req, res) {
     
@@ -9,6 +9,8 @@ var port = 3000;
     res.end('Hello, world!');
     
 }).listen(process.env.PORT || 8080);*/
+
+process.env.PORT
 
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/public");
